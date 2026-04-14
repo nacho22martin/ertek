@@ -65,11 +65,13 @@ select {
 }
 
 .site-header {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  inset: 0 0 auto;
   z-index: 50;
   padding: 1rem 0;
-  background: transparent;
+  background: rgba(16, 28, 44, 0.52);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 28px rgba(6, 16, 26, 0.12);
   transition:
     background var(--transition),
     box-shadow var(--transition),
@@ -79,7 +81,7 @@ select {
 
 .site-header.is-scrolled {
   padding: 0.65rem 0;
-  background: rgba(16, 28, 44, 0.8);
+  background: rgba(16, 28, 44, 0.82);
   backdrop-filter: blur(18px);
   box-shadow: 0 12px 30px rgba(6, 16, 26, 0.18);
 }
@@ -217,7 +219,7 @@ select {
   gap: 3rem;
   align-items: center;
   min-height: 100vh;
-  padding: 8rem 0 5rem;
+  padding: 9.5rem 0 5rem;
 }
 
 .hero-copy h1,
@@ -231,8 +233,8 @@ select {
 
 .hero-copy h1 {
   max-width: 12ch;
-  font-size: clamp(3rem, 7vw, 5.4rem);
-  line-height: 1.02;
+  font-size: clamp(2.8rem, 5.4vw, 4.65rem);
+  line-height: 1.06;
 }
 
 .hero-copy h1 span {
@@ -779,7 +781,7 @@ select {
 
   .hero-grid {
     min-height: auto;
-    padding-top: 8.5rem;
+    padding-top: 8.75rem;
   }
 
   .steps-grid,
